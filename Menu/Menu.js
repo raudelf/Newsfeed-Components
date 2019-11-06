@@ -33,7 +33,7 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
-function menuComponent() {
+function menuComponent(n) {
 
 // Create Elements
 const menu = document.createElement('div');
@@ -48,9 +48,12 @@ menu.classList.add('menu');
 // Content
 const menuButton = document.querySelector('.menu-button');
 menuItems.forEach((n) => {
+
   const listItem = document.createElement('li');
-  listItem.textContent = menuItems[n];
+  listItem.textContent = n;
+
   listBox.appendChild(listItem);
+  menu.appendChild(listBox);
 });
 
 // Event
@@ -62,5 +65,5 @@ menuButton.appendChild(menu);
 return menu;
 };
 
-const menuList = document.querySelector('.menu-button');
-menuList.appendChild(menuComponent());
+const menuList = document.querySelector('.header');
+menuList.appendChild(menuComponent(menuItems));
