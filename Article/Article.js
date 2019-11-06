@@ -133,8 +133,8 @@ const open = '\u25bc';
 button.textContent = open;
 
 // Events
-button.addEventListener('click', () =>{
-  button.classList.toggle('article-open')
+article.addEventListener('click', () =>{
+  article.classList.toggle('article-open')
 });
 
 return article;
