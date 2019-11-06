@@ -87,12 +87,26 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }, 
   {
-    title: 'Raudel gets hired!',
+    title: 'Raudel Gets Hired!',
     date: 'Feb 19, 2021',
     firstParagraph: 'Very Wow',
     secondParagraph: 'Such Developer',
     thirdParagraph: 'kawaiii'
-  }
+  },
+  {
+    title: 'Lambda School Wins Award for Best Curriculum',
+    date: 'March 14, 2021',
+    firstParagraph: 'Very Wow',
+    secondParagraph: 'Such Developer',
+    thirdParagraph: 'kawaiii'
+  },
+  {
+    title: 'Mr. Beast Saves Planet Earth!',
+    date: 'March 15, 2021',
+    firstParagraph: 'Very Wow',
+    secondParagraph: 'Such Developer',
+    thirdParagraph: 'kawaiii'
+  },
 ];
 
 /* Step 1: Create a function that creates a component. You will want your component to look like the template below: 
