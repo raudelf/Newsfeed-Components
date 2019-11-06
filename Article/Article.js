@@ -101,7 +101,7 @@ const data = [
 
   Hint: You will need to use createElement more than once here!
 */
-function component(title, date, pOne, pTwo, pThree) {
+function component(title, date, firstParagraph, secondParagraph, thirdParagraph) {
 const article = document.createElement('div');
 const headline = document.createElement('h2');
 const dateData = document.createElement('p');
@@ -126,12 +126,20 @@ button.classList.add('expandButton');
 // Add Content 
 headline.textContent = title;
 dateData.textContent = date;
-paragraphOne.textContent = pOne;
-paragraphTwo.textContent = pTwo;
-paragraphThree.textContent = pThree;
+paragraphOne.textContent = firstParagraph;
+paragraphTwo.textContent = secondParagraph;
+paragraphThree.textContent = thirdParagraph;
+
+// Events
+
 
 return article;
 };
+
+const container = document.querySelector('.articles');
+data.forEach(element => {
+  container.appendChild(component(element.title, element.date, element.firstParagraph, element.secondParagraph, element.thirdParagraph));
+});
 /*
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 
