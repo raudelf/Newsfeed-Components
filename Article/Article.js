@@ -100,7 +100,39 @@ const data = [
   </div>
 
   Hint: You will need to use createElement more than once here!
+*/
+function component(title, date, pOne, pTwo, pThree) {
+const article = document.createElement('div');
+const headline = document.createElement('h2');
+const dateData = document.createElement('p');
+const paragraphOne = document.createElement('p');
+const paragraphTwo = document.createElement('p');
+const paragraphThree = document.createElement('p');
+const button = document.createElement('span');
 
+// Nesting
+article.appendChild(headline);
+article.appendChild(dateData);
+article.appendChild(paragraphOne);
+article.appendChild(paragraphTwo);
+article.appendChild(paragraphThree);
+article.appendChild(button);
+
+// Assign Classes
+article.classList.add('article');
+dateData.classList.add('date');
+button.classList.add('expandButton');
+
+// Add Content 
+headline.textContent = title;
+dateData.textContent = date;
+paragraphOne.textContent = pOne;
+paragraphTwo.textContent = pTwo;
+paragraphThree.textContent = pThree;
+
+return article;
+};
+/*
   Your function should take either an object as it's one argument, or 5 separate arguments mapping to each piece of the data object above.
 
   Step 2: Add an event listener to the expandButton span. This event listener should toggle the class 'article-open' on the 'article' div.
