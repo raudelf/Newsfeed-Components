@@ -38,34 +38,29 @@ function menuComponent() {
 // Create Elements
 const menu = document.createElement('div');
 const listBox = document.createElement('ul');
-const itemOne = document.createElement('li')
-const itemTwo = document.createElement('li')
-const itemThree = document.createElement('li')
-const itemFour = document.createElement('li')
-const itemFive = document.createElement('li')
-const itemSix = document.createElement('li')
 
 // Nesting
 menu.appendChild(listBox);
-listBox.appendChild(itemOne);
-listBox.appendChild(itemTwo);
-listBox.appendChild(itemThree);
-listBox.appendChild(itemFour);
-listBox.appendChild(itemFive);
-listBox.appendChild(itemSix);
 
 // Assign Classes
 menu.classList.add('menu');
 
 // Content
-
-menuButton = document.querySelector('.menu-button');
+const menuButton = document.querySelector('.menu-button');
+menuItems.forEach((n) => {
+  const listItem = document.createElement('li');
+  listItem.textContent = menuItems[n];
+  listBox.appendChild(listItem);
+});
 
 // Event
 menuButton.addEventListener('click', () => {
-  menuButton.classList.toggle('menu--open');
+  menu.classList.toggle('menu--open');
 });
+menuButton.appendChild(menu);
 
 return menu;
 };
 
+const menuList = document.querySelector('.menu-button');
+menuList.appendChild(menuComponent());
