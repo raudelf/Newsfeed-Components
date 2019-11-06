@@ -129,9 +129,13 @@ dateData.textContent = date;
 paragraphOne.textContent = firstParagraph;
 paragraphTwo.textContent = secondParagraph;
 paragraphThree.textContent = thirdParagraph;
+const open = '\u25bc';
+button.textContent = open;
 
 // Events
-
+button.addEventListener('click', () =>{
+  button.classList.toggle('article-open')
+});
 
 return article;
 };
